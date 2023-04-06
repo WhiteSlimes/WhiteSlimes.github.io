@@ -1,0 +1,31 @@
+@use "sass:color";
+@import "./variables";
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button{
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 13px 18.75px;
+
+    @include button-hover;
+}
+
+@mixin button-hover(){
+    
+    $hover-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+        box-shadow: $hover-shadow;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+}

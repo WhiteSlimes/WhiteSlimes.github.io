@@ -29,3 +29,25 @@
         transition: box-shadow 0.3s ease-in-out;
     }
 }
+
+@mixin hearth{
+    width: 22px;
+    height: 21px;
+        .heart-path {
+            position: absolute;
+            fill: none;
+            stroke: black;
+            stroke-width: 1;
+        }
+        .heart-filled {
+            opacity: 0;
+            transition: opacity 1s;
+            fill: url(#purpleGradient);
+            stroke: url(#purpleGradient);
+        }
+        &:active .heart-filled,
+        &:focus .heart-filled,
+        &:hover .heart-filled {
+        opacity: 1;
+        }
+}

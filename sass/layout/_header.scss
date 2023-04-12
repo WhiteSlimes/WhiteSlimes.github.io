@@ -3,6 +3,7 @@
     position: relative;
     height: 63px;
     width: 100%;
+    background: white;
     @include flex-center;
     &__logo{
         font-family: 'Shrikhand', cursive;
@@ -10,5 +11,14 @@
         color: black;
         font-style: italic;
         font-weight: 400;
+    }
+    &__arrow{
+        position: absolute;
+        left: 35px;
+        top: 35%;
+        font-size: 25px;
+        & a{
+            color: black
+        }
     }
 }

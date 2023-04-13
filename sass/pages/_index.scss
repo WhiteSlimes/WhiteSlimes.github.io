@@ -41,7 +41,7 @@
         background: #ffffff;
         width: 95%;
         display: flex;
-        max-width: 1200px;
+        max-width: 1440px;
         flex-direction: column;
         padding: 48px 20px 68px;
     }
@@ -72,10 +72,10 @@
     }
     &__icon{
         color: #7E7E7E;
-        margin: 0 25px 0 40px;
+        margin: 0 20px 0 33px;
         &-purple{
             color: $color-primary;
-            margin: 0 25px 0 40px;
+            margin: 0 20px 0 33px;
         }
     }  
 }
@@ -83,7 +83,7 @@
     width: 100%;
     @include flex-center;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1440px;
     background: #f6f6f6;
     padding-bottom: 66px;
     &__content{
@@ -197,5 +197,43 @@
         font-size: 16px;
         font-weight: 400;
        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .reservation__title{
+        width: 100%;
+    }
+    .reservation__subtitle{
+        width: 100%;
+    }
+    .process__steps{
+        flex-direction: row;
+        gap: 36px;
+        justify-content: center;
+        width: 100%;
+    }
+    .process__step{
+        width: 100%;
+    }
+    .restaurants__cards{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    .footer{
+        &__content{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+        &__logo{
+            padding: 0px;
+            margin-left: 50px;
+        }
+        &__bloc-links{
+            flex-direction: row;
+            gap: 29px;
+        }
     }
 }

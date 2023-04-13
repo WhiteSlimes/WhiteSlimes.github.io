@@ -92,7 +92,8 @@ h2 {
   margin-bottom: 27px;
 }
 .reservation__button {
-  opacity: 1;
+  font-size: 16px;
+  font-weight: 500;
   background: linear-gradient(185deg, #FF79DA -20%, #9356DC 100%);
   color: white;
   border-radius: 25px;
@@ -309,18 +310,21 @@ h2 {
 }
 
 .menu {
-  background: white;
+  background: #f7f7f7;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .menu__content {
+  overflow: hidden;
   padding: 0 13px;
   border-radius: 30px 30px 0 0;
-  width: 100%;
+  width: 93%;
   margin-top: -200px;
   background-color: #f7f7f7;
+  padding-bottom: 40px;
 }
 .menu__header {
   display: flex;
@@ -363,6 +367,8 @@ h2 {
   gap: 40px;
 }
 .menu__grid__bloc {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
   display: grid;
   gap: 12px;
 }
@@ -378,7 +384,9 @@ h2 {
   font-size: 16px;
 }
 .menu__grid__card {
+  position: relative;
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
@@ -388,17 +396,44 @@ h2 {
   background: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
+.menu__grid__card:hover .validation__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  animation: left-slide 0.7s ease;
+}
+.menu__grid__card:hover .menu__card__price {
+  padding-right: 70px;
+  transition: 0.7s ease;
+}
 .menu__grid__card .food-and-price {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.menu__grid__card .validation__box {
+  display: none;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  padding: 0 15px;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.menu__grid__card .validation__box i {
+  font-size: 20px;
+  color: white;
+}
 .menu__card__food {
   margin-left: 15px;
+  margin-right: 5px;
   overflow: hidden;
+  white-space: nowrap;
 }
 .menu__card__food p {
+  margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -413,6 +448,56 @@ h2 {
 .menu__card__price {
   padding-right: 10px;
   font-weight: 700;
+  padding-top: 20px;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(185deg, #FF79DA -20%, #9356DC 100%);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 13px 18.75px;
+  margin-bottom: 40px;
+}
+.menu__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@keyframes left-slide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+#bloc1 {
+  animation-delay: 0.5s;
+}
+
+#bloc2 {
+  animation-delay: 1s;
+}
+
+#bloc3 {
+  animation-delay: 1.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@
     }
 }
 .menu{
-    background: #f7f7f7;
+    background: white;
     width: 100%;
     @include flex-center;
     flex-direction: column;
@@ -142,7 +142,7 @@
         transform: scaleX(0);
     }
     100%{
-        transform: scaleX(-50px);
+        transform: scaleX(1);
     }
 }
 @keyframes fadeInUp{
@@ -168,8 +168,9 @@
 @media screen and (min-width: 800px) {
     
     .menu{
+        width: 100%;
         max-width: 1440px;
-        background: white;
+        margin: auto;
         &__content{
             max-width: 1055px;
             width: 80%;

@@ -15,19 +15,16 @@
     flex-direction: column;
     &__content{
         overflow: hidden;
-        padding: 0 13px;
         border-radius: 30px 30px 0 0;
-        width: 93%;
+        width: 100%;
         margin-top: -200px;
         background-color: #f7f7f7;
-        padding-bottom: 40px;
     }
     &__header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 30px;
-        margin-bottom: 42px;
+        padding: 30px 17px 42px;
         &__title{
             font-family: 'Shrikhand';
             font-size: 28px;
@@ -44,6 +41,7 @@
     &__grid{
         display: grid;
         gap: 40px;
+        padding: 0 13px;
         &__bloc{
             opacity: 0;
             animation: fadeInUp 1s forwards;
@@ -130,9 +128,12 @@
         }
     }
     &__button{
+        margin: 40px 0;
+        width: 100%;
         @include flex-center;
-        @include button;
-        margin-bottom: 40px;
+        &-text{
+            @include button;
+        }
     }
 }
 
@@ -162,4 +163,30 @@
 }
 #bloc3{
     animation-delay: 1.5s;
+}
+
+@media screen and (min-width: 800px) {
+    
+    .menu{
+        max-width: 1440px;
+        background: white;
+        &__content{
+            max-width: 1055px;
+            width: 80%;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__header{
+            width: 100%;
+            justify-content: center;
+            &__title{
+                margin-right: 23px;
+            }
+        }
+        &__grid{
+            width: 50%;
+        }
+    }
 }

@@ -354,19 +354,16 @@ h2 {
 }
 .menu__content {
   overflow: hidden;
-  padding: 0 13px;
   border-radius: 30px 30px 0 0;
-  width: 93%;
+  width: 100%;
   margin-top: -200px;
   background-color: #f7f7f7;
-  padding-bottom: 40px;
 }
 .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  margin-bottom: 42px;
+  padding: 30px 17px 42px;
 }
 .menu__header__title {
   font-family: "Shrikhand";
@@ -400,6 +397,7 @@ h2 {
 .menu__grid {
   display: grid;
   gap: 40px;
+  padding: 0 13px;
 }
 .menu__grid__bloc {
   opacity: 0;
@@ -486,9 +484,13 @@ h2 {
   padding-top: 20px;
 }
 .menu__button {
+  margin: 40px 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.menu__button-text {
   font-size: 16px;
   font-weight: 500;
   background: linear-gradient(185deg, #FF79DA -20%, #9356DC 100%);
@@ -496,9 +498,8 @@ h2 {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   padding: 13px 18.75px;
-  margin-bottom: 40px;
 }
-.menu__button:hover {
+.menu__button-text:hover {
   cursor: pointer;
   opacity: 0.7;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
@@ -533,6 +534,31 @@ h2 {
 
 #bloc3 {
   animation-delay: 1.5s;
+}
+
+@media screen and (min-width: 800px) {
+  .menu {
+    max-width: 1440px;
+    background: white;
+  }
+  .menu__content {
+    max-width: 1055px;
+    width: 80%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__header {
+    width: 100%;
+    justify-content: center;
+  }
+  .menu__header__title {
+    margin-right: 23px;
+  }
+  .menu__grid {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
